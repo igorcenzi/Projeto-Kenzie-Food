@@ -1,0 +1,228 @@
+:root{
+  --color-white: #FFFFFF;
+  --color-gray-1: #F8F9FA;
+  --color-gray-3: #868E96;
+  --color-secondary: #4ACA94;
+  --color-secondary-50: #E4F7EF;
+  --color-primary: #FF2253;
+  --color-primary-50: #FFE9EE;
+}
+
+.container-modal{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal{
+  font-family: 'Poppins';
+  width: 320px;
+  position: relative;
+  max-width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+}
+.modal-header{
+  pointer-events: none;
+  height: 60px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-logo{
+  margin-top: 15px;
+  pointer-events: none;
+}
+.modal-logo-img{
+  width: 130px;
+  pointer-events: none;
+}
+.modal-main{
+  background-color: var(--color-gray-1);
+  border-radius: 0 0 5px 5px;
+}
+.modal-main-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 12px;
+}
+.modal-button{
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  font-size: 12px;
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-3);
+  padding: 5px 10px;
+  border: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 5px 0px 0px;
+}
+.button-selected{
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+.modal-main-form{
+  box-sizing: border-box;
+  background-color: var(--color-gray-1);
+  font-family: 'Poppins';
+  font-size: 12px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 15px;
+}
+.input-box{
+  margin-top: 15px;
+  box-sizing: border-box;
+  width: 265px;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-bottom: 15px;
+}
+.input-box:nth-child(1){
+  margin-top: 15px;
+}
+.modal-main-categoria{
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 265px;
+  padding: 9px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 5px;
+}
+.modal-categoria-span{
+  position: absolute;
+  top: -4px;
+  background-color: var(--color-gray-1);
+  font-size: 10px;
+}
+.modal-main-input{
+  box-sizing: border-box;
+  width: 265px;
+  background-color: var(--color-gray-1);
+  border: 1px solid var(--color-gray-3);
+  border-radius: 5px;
+  height: 35px;
+  padding-left: 15px;
+}
+.modal-main-label{
+  position: absolute;
+  top: -4px;
+  left: 10px;
+  cursor: text;
+  pointer-events: none;
+  font-size: 10px;
+  background-color: var(--color-gray-1);
+}
+.modal-main-salvar{
+  box-sizing: border-box;
+  border: none;
+  line-height: 28px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  align-self: flex-end;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 25px;
+}
+.modal-main-salvar:hover{
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.modal-form-select{
+  display: none;
+  margin: 25px 0;
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: var(--color-secondary-50);
+  font-family: 'Poppins';
+  font-size: 14px;
+  color: var(--color-gray-3);
+  border-radius: 5px;
+}
+
+.modal-fechar{
+  position: absolute;
+  cursor: pointer;
+  right: -10px;
+  top: -10px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 20px;
+  padding: 5px;
+  font-family: 'Poppins';
+  font-weight: 700;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.display-none{
+  display: none;
+}
+
+.display-block{
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .modal{
+    width: 600px;
+    margin: 0 auto;
+  }
+  .modal-main{
+    width: 100%;
+  }
+  .modal-main-buttons{
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+  .modal-main-categoria{
+    height: 35px;
+    margin-top: 15px;
+  }
+  .modal-main-form{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 0px;
+  }
+  .input-box{
+    margin-top: 15px;
+  }
+  
+  .input-box:nth-child(6){
+    width: 100%;
+  }
+  .modal-main-input{
+    width: 100%;
+  }
+}

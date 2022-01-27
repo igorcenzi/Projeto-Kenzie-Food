@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./src/imgs/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="src/style/reset.css">
+    <link rel="stylesheet" href="src/style/index.css">
+    <link rel="stylesheet" href="./src/style/modal.css">
+    <title>Kenzie Food</title>
+</head>
+<body>
+    <header>
+        <img src="src/imgs/Group 1075.png" alt="logo Kenzie Food">
+        <div class="pesquisa">
+            <input type="text" name="Pesquisa" id="searchInput" placeholder="Pesquisar por produto">
+            <button id="buttonSearch"><img src="src/imgs/Text.svg" alt="pesquisa"></button>
+        </div>
+    </header>
+    <div class="float">
+    <main>
+        <ul class="listaFiltros">
+            <li>
+                <button id="todos" class="filter">Todos</button>
+            </li>
+            <li>
+                <button id="Panificadora" class="filter"><img src="src/imgs/bread.png" alt="bread"> Panificadora</button>
+            </li>
+            <li>
+                <button id="Frutas" class="filter"><img src="src/imgs/strawberry.png" alt="fruta"> Frutas</button>
+            </li>
+            <li>
+                <button id="Bebidas" class="filter"><img src="src/imgs/wine-glass.png" alt="wine-glass"> Bebidas</button>
+            </li>
+            <li>
+                <button id="addProduct">+</button>
+            </li>
+        </ul>
+        <ul class="listaProdutos">
+            
+        </ul>
+    </main>
+    <aside>
+        <h2><img src="src/imgs/shopping-cart_1f6d2.png" alt="Carrinho"> Carrinho</h2>
+        <ul class="listaCarrinho carrinhoVazio">
+            <div class="vazioTexto">
+                <p><strong>Ops!</strong></p>
+                <p>Por enquanto não temos produtos no carrinho</p>
+            </div>
+        </ul>
+        <div class="hidden">
+            <div class="qntItems">
+                <p>Quantidade</p>
+                <p id="quantidade"></p>
+            </div>
+            <div class="sumTotal">
+                <p>Total</p>
+                <p id="sumTotal"></p>
+            </div>
+        </div>
+        
+    </aside>
+    </div>
+
+
+    <div class="container-modal display-none">
+    <section class="modal">
+        <span class="modal-fechar">X</span>
+        <div class="modal-header">
+            
+              <figure class="modal-logo">
+                  <img src="src/imgs/logo-kenzie-food.svg" alt="" class="modal-logo-img">
+              </figure>
+        </div>
+        <div class="modal-main">
+            <nav class="modal-main-buttons">
+                <button class="modal-button button-novo button-selected">Novo</button><button class="modal-button button-alterar">Alterar</button><button class="modal-button button-deletar">Deletar</button>
+            </nav>
+            <form action="" class="modal-main-form">
+                <select name="select" class="modal-form-select" id="modal-form-select">
+                    <option value="valor1">Selecione</option>
+                </select>
+                <div class="input-box">
+                    <label for="modal-form-nome" name="nome"    class="modal-main-label label-nome">Nome</label>
+                    <input class="modal-main-input" type="text" id="modal-form-nome" placeholder="">
+                </div>
+                <div class="input-box">
+                    <label for="modal-form-preco" name="preco" class="modal-main-label label-preco">Preço</label>
+                    <input class="modal-main-input" type="number" id="modal-form-preco">
+                </div>
+                <div class="input-box">
+                    <label for="modal-form-descricao" name="descricao" class="modal-main-label label-descricao">Descrição</label>
+                    <input class="modal-main-input" type="text" id="modal-form-descricao">
+                </div>
+                <div class="modal-main-categoria">
+                    <label class="modal-categoria-span">Categoria</label>
+                    <input type="radio" name="radio" value="Panificadora" class="modal-radio" id="radio-panificadora">
+                    <label for="radio-panificadora">Panificadora</label>
+                    <input type="radio" name="radio" value="Frutas" class="modal-radio" id="radio-frutas">
+                    <label for="radio-frutas">Frutas</label>
+                    <input type="radio" name="radio" value="Bebidas" class="modal-radio" id="radio-bebidas">
+                    <label for="radio-bebidas">Bebidas</label>
+                </div>
+                <div class="input-box">
+                    <label for="modal-form-imagem" name="imagem" class="modal-main-label label-imagem">Imagem</label>
+                    <input class="modal-main-input" class="modal-main-input" type="text" id="modal-form-imagem">
+                </div>
+                    <button class="modal-main-salvar">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+<script src="./src/js/modal.js" type="module"></script>
+    <script src="src/controllers/vitrine-controller.js" type="module"></script>
+    
+</body>
+</html>
